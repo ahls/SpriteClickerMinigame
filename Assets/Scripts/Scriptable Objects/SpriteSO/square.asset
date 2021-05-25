@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e6d073aa43b474ead05d551076930d, type: 3}
   m_Name: square
   m_EditorClassIdentifier: 
-  movementList: []
-  sprite: {fileID: 0}
-  flahsingInterval: 0
-  flashingDuration: 0
+  movementList:
+  - velocity: {x: 3, y: 0}
+    duration: 5
+    doesNotBounce: 0
+  - velocity: {x: 0, y: 3}
+    duration: 5
+    doesNotBounce: 0
+  - velocity: {x: -3, y: 3}
+    duration: 5
+    doesNotBounce: 0
+  sprite: {fileID: 21300000, guid: 570dc8442edaf0341882f148677c5656, type: 3}
+  flahsingInterval: 3
+  flashingDuration: 1

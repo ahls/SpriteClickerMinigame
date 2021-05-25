@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e6d073aa43b474ead05d551076930d, type: 3}
   m_Name: circle
   m_EditorClassIdentifier: 
-  movementList: []
-  sprite: {fileID: 0}
-  flahsingInterval: 0
-  flashingDuration: 0
+  movementList:
+  - velocity: {x: 1, y: 0.5}
+    duration: 0
+    doesNotBounce: 1
+  sprite: {fileID: 21300000, guid: 8714b1f82dd7ab74197960aa015afc8d, type: 3}
+  flahsingInterval: 2
+  flashingDuration: 1

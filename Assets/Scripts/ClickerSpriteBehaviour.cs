@@ -17,8 +17,9 @@ public class ClickerSpriteBehaviour : MonoBehaviour
     private bool _movementFixed;
     private Vector3 _currentVelocity;
 
-   
+
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private Collider2D _collider;
     private float xExtent, yExtent; // used to keep the sprites from moving outside of the boundaries
 
 
@@ -50,6 +51,7 @@ public class ClickerSpriteBehaviour : MonoBehaviour
         _flashInterval = _scriptableObject.flahsingInterval;
         _flashDuration = _scriptableObject.flashingDuration;
 
+        //_collider.bounds.size = _renderer.sprite.bounds.size;
         xExtent = _renderer.sprite.bounds.extents.x;
         yExtent = _renderer.sprite.bounds.extents.y;
     }
