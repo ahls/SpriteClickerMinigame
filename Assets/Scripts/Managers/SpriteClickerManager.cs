@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 public class SpriteClickerManager : MonoBehaviour
 {
     public static SpriteClickerManager instance;
@@ -23,6 +24,16 @@ public class SpriteClickerManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+        }
+    }
+    private void Start()
+    {
+
+        // this violoates the idea of factory, since it is not separating the whole creation part...
+        foreach (var item in scriptableObjectsList)
+        {
+            GlobalManager.instance.clickerSpriteFactory.AddToList(item.name, item);
+            Debug.Log(item.name);
         }
     }
 
